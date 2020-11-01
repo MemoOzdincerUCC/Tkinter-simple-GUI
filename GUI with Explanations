@@ -1,0 +1,23 @@
+new = 1
+url = "https://github.com/MemoOzdincerUCC"
+def openweb():
+    webbrowser.open(url,new=new)
+# Here I've added two variables and a function to use in the code. The function will work as a hyperlink.
+from tkinter import *
+# Imports Tkinter, without this command, no code will work under Tkinter.
+# You might also want to import it as: "import tkinter as tk" to make the prefix for using Tkinter "tk."
+
+root=Tk()
+# This creates a box, it marks the start of the GUI, you can put anything you'd like into root=Tk()
+button: object = button(frame, # A 'Button', often referred to as: 'tk.button' is a WIDGET in Tkinter.
+# Widgets are elements of the GUI.
+                   text="Link to my GitHub",
+                   fg="black",
+                   command=openweb
+# The indented lines are for customization of the widget. Using command terms like text, fg, and command;
+# I can set what the button will do and say. In this case I set it to say 'Link to my GitHub' and as a function,
+# Link my GitHub
+button.pack(side=LEFT)
+# To indicate the end of and position of the widget, you use 'button.pack' and any more elements in the brackets.
+root.mainloop()
+# End of the GUI
